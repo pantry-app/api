@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  pantry_web:
+    build: .
+    ports:
+      - 19350:8000
+    environment:
+      DJANGO_SETTINGS_MODULE: "api.settings.production"
+    volumes:
+      - ${PWD}/prod.sqlite3:/code/prod.sqlite3
