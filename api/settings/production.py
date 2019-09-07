@@ -1,6 +1,6 @@
 from .common import *  # noqa
 
-ALLOWED_HOSTS = ["localhost:4200", "pantry.tmk.name"]
+ALLOWED_HOSTS = ["*"]
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
