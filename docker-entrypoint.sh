@@ -10,5 +10,6 @@ echo "Apply database migrations"
 python manage.py migrate
 
 # Start server
-echo "Starting server"
-uwsgi --http :8000 --module api.wsgi --static-map /static=/code/staticfiles
+# echo "Starting server"
+# uwsgi --http :8000 --module api.wsgi --static-map /static=/code/staticfiles
+uwsgi /code/uswgi.ini
