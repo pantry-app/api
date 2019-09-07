@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
+import e2e.urls
 from pantry.views import RecipeViewSet, IngredientViewSet
 
 router = routers.DefaultRouter()
@@ -26,6 +27,7 @@ router.register(r"ingredients", IngredientViewSet, basename="ingredients")
 
 urlpatterns = [
     path("", include(router.urls)),
+    path("e2e/", include(e2e.urls)),
     path("admin/", admin.site.urls),
     path("api-auth/", include("rest_framework.urls")),
     path("auth/", include("djoser.urls")),
